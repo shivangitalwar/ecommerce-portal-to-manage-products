@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MY PRODUCTS</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		#maindiv{
+			background-image: url(supermarket.jpg);
+			position: relative;
+			margin: 0 auto;
+			
+			text-align: center;
+			height: auto;
+			width: 400px;
+			align-items: center;
+
+		}
+		#main{
+			height: auto;
+			width: 100%;
+			background-color:black;
+
+		}
+		input
+		{
+			width: 150px;
+			height: 20px;
+			border-radius: 6px;
+			
+		}
+		textarea
+		{
+			border-radius: 6px;
+			width:150px;
+			height: 50px;
+		}
+		label
+		{
+			font-size: 25px;
+		}
+		#popup {
+         display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+           left: 0;
+            top: 0;
+         width: 100%; /* Full width */
+         height: 100%; /* Full height */
+         overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(144,144,106); /* Fallback color */
+         background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+         }
+         #pop
+         {
+         	display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+           left: 0;
+            top: 0;
+         width: 100%; /* Full width */
+         height: 100%; /* Full height */
+         overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(144,144,106); /* Fallback color */
+         background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+         }
+         .content {
+        background-color: black;
+         margin: 5% auto; /* 15% from the top and centered */
+         color:white;
+        padding: 2px;
+        border: 1px solid #888;
+         width: 20%; /* Could be more or less, depending on screen size */
+
+          }
+          #butt3
+          {
+          	background-color: #666160;
+          	color: white;
+          	padding: 15px 32px;
+          }
+          #header
+          {
+          	background-color: grey;
+          	height:25px;
+          	width: 100%;
+          }
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div align="right" id="header" >
+			<button onclick="viewcart()" > 
+				<i class="fa fa-shopping-cart" style="font-size: 20px; width:50px;"></i>
+			</button>
+			</div>
+		<div id="maindiv">
+			<br><br><br>
+		
+     	<label>ENTER PRODUCT DETAILS</label>
+     	<br>
+     	<br>
+     	<form id="myform">
+     	<input type="text" name="prodname" id="pname" placeholder="enter prodname">
+     	<br>
+     	<br>
+     	<textarea placeholder="enter prod description" id="pd"></textarea>
+     	<br>
+     	<br>
+     	<input type="text" name="pprice" id="pprice" placeholder="enter prodprice">
+     	<br>
+     	<br>
+     	<input type="text" name="pquan" id="pquan" placeholder="prod quantity">
+     	<br>
+     	<br>
+     	<button onclick="add()">Add Product</button>
+     </form>
+     	<br>
+     	<button onclick="viewlist()" ondblclick="hidelist()">View Products</button>
+     	<br>
+     	<div id="popup">
+     		<label class="content">EDIT PRODUCTS</label>
+     		<br>
+     		<br>
+     		<p class="content">change name:</p><input type="text" name="pname" id="newpname" >
+     		<br>
+     	    <br>
+     		<p class="content">change price:</p><input type="text" name="pprice" id="newprice">
+     		<br>
+     		<br>
+     		<p class="content">change quantity:</p><input type="text" name="pquan" id="newquan" >
+     		<br>
+     		<br>
+     	</div>
+     	<div id="pop">
+     		<div align="right">
+     		<button onclick="hidepopu()"><i class="fa fa-window-close" style="font-size: 20px;"></i></button>
+     		<div id="enter" align="center"></div>
+     	</div>
+     	</div>
+		<div id="addhere"></div>
+		<br>
+       
+     </div>
+	</div>
+	<script type="text/javascript" src="pro1.js"></script>
+</body>
+</html>
